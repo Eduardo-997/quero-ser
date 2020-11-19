@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+	
+	
+	// assassino: Donald Duck Knuth
+	// local: Tokio
+	// arma: Gládio
+	
+	int assassino=2, local=4, arma=6, suspeito, possivel_local, possivel_arma, errou=0;
+	
+	printf("qual seu suspeito?: \n");
+	scanf("%d", &suspeito);
+	
+	printf("\n qual foi o local do assassinato?: \n");
+	scanf("%d", &possivel_local);
+	
+	printf("\n qual arma foi utilizada?: \n");
+	scanf("%d", &possivel_arma);
+	
+		errou=0;
+	
+		if (suspeito!=2)
+		
+			errou=1;
+		
+		
+		if (possivel_local!=4)
+		
+			errou=2;
+		
+		
+		if (possivel_arma!=6)
+		
+			errou=3;
+		
+		
+		printf("\n resposta da testemunha: %d \n", errou);
+	
+	while (errou!=0)
+	{
+		errou=0;
+		
+		printf("qual seu suspeito?: \n");
+		scanf("%d", &suspeito);
+	
+		printf("\n qual foi o local do assassinato?: \n");
+		scanf("%d", &possivel_local);
+	
+		printf("\n qual arma foi utilizada?: \n");
+		scanf("%d", &possivel_arma);
+		
+		if (suspeito!=2)
+		
+			errou=1;
+		
+		
+		if (possivel_local!=4)
+		
+			errou=2;
+		
+		
+		if (possivel_arma!=6)
+		
+			errou=3;
+		
+		
+		printf("\n resposta da testemunha: %d \n", errou);
+		
+	}
+	
+	
+	
+	
+	printf("\n todos corretos, você solucionou o caso \n");
+	return 0;
+	
+}
