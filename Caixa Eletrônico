@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	int const numeroconta=2065, senha=6520;
+	int saque, saque100, saque50, saque20, saque10, resto100, resto50, resto20, digitado;
+	char letra, valorconta[8]= {'i','n','f','i','n','i','t','o'};
+	
+	printf("digite o numero da sua conta:");
+	scanf("%d", &digitado);
+	
+	if (digitado==numeroconta)
+	{
+		printf("\n digite a senha da conta:");
+		scanf("%d", &digitado);
+		
+		if (digitado==senha)
+		{
+			printf("\n \n se deseja sacar digite 'S', caso deseje ver extrato digite 'E':");
+			scanf("%c", &letra);
+			scanf("%c", &letra);
+			
+			
+			if (letra == 'E' )
+			{
+				printf("\n \n seu saldo em conta é: %s", valorconta);
+			}
+			
+			else if (letra == 'S')
+			{
+				printf("\n \n digite o valor que deseja sacar: \n");
+				scanf("%d", &saque);
+	
+	
+				saque100=saque/100;
+				resto100=saque%100;
+	
+				saque50=resto100/50;
+				resto50=resto100%50;
+	
+				saque20=resto50/20;
+				resto20=resto50%20;
+	
+				saque10=resto20/10;
+	
+	
+				printf("\n \n voce sacou %d notas de 100, %d notas de 50, %d notas de 20 e %d notas de 10.", saque100, saque50, saque20, saque10);
+				printf("\n \n seu novo saldo é: %s", valorconta);
+			}
+			
+			else printf("\n \n opção não encontrada");
+		}
+		
+		else printf("\n \n senha incorreta");
+	}
+	
+	else printf("\n \n conta não encontrada");
+	
+	
+	return 0;
+}
